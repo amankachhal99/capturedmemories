@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<title>Captured Memories</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		
+		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   3000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	700,		// Speed of transition
+															   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : 'images/img/pic(1).jpg', title : 'Image Credit: Maria Kazvan', thumb : 'images/img/pic(1).jpg'},
+														{image : 'images/img/pic(2).jpg', title : 'Image Credit: Maria Kazvan', thumb : 'images/img/pic(1).jpg'},  
+														{image : 'images/img/pic(3).jpg', title : 'Image Credit: Maria Kazvan', thumb : 'images/img/pic(1).jpg'}, 
+														{image : 'images/img/pic(4).jpg', title : 'Image Credit: Colin Wojno', thumb : 'images/img/pic(1).jpg'}, 
+														{image : 'images/img/pic(5).jpg', title : 'Image Credit: Colin Wojno', thumb : 'images/img/pic(1).jpg'}/*, 
+														{image : 'images/img/pic(1).jpg', title : 'Image Credit: Colin Wojno', thumb : 'images/img/pic(1).jpg'}, 
+														{image : 'images/img/pic(1).jpg', title : 'Image Credit: Brooke Shaden', thumb : 'images/img/pic(1).jpg'}, 
+														{image : 'images/img/pic(1).jpg', title : 'Image Credit: Brooke Shaden', thumb : 'images/img/pic(1).jpg'}, 
+														{image : 'images/img/pic(1).jpg', title : 'Image Credit: Brooke Shaden', thumb : 'images/img/pic(1).jpg'}*/	
+												]
+					
+				});
+				$("#header").load("header.html");
+		    });
+		    
+		</script>
+	</head>
+
+<body>
+	<div id = "header"></div>
+	
+	<!--Thumbnail Navigation-->
+	<div id="prevthumb"></div>
+	<div id="nextthumb"></div>
+	
+	<!--Arrow Navigation-->
+	<a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a>
+	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div>
+	<!--Control Bar-->
+	<div id="controls-wrapper" class="load-item">
+		<div id="controls">
+			<a id="play-button"><images id="pauseplay" src="images/pause.png"/></a>
+		
+			<!--Slide counter-->
+			<div id="slidecounter">
+				<span class="slidenumber"></span> / <span class="totalslides"></span>
+			</div>
+			
+			<!--Slide captions displayed here-->
+			<div id="slidecaption"></div>
+			
+			<!--Thumb Tray button-->
+			<a id="tray-button"><img id="tray-arrow" src="images/button-tray-up.png"/></a>
+			
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+		</div>
+	</div>
+
+</body>
+</html>
